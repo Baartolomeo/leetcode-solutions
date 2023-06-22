@@ -8,6 +8,7 @@ class ListNode:
         self.next = next
 
 class Solution:
+
     def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
         current_node = root = head
         is_left_node = lambda x: x == left
