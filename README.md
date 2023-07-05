@@ -1,2 +1,2 @@
 # leetcode-solutions
-Solutions of alghorithmics problems on: https://leetcode.com/
+My solutions of alghorithmics problems on: https://leetcode.com/ :)

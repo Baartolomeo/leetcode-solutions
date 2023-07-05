@@ -1,6 +1,24 @@
+"""Description.
+
+Given n pairs of parentheses, write a function to generate
+all combinations of well-formed parentheses.
+
+Example:
+    Input: n = 3
+    Output: ["((()))","(()())","(())()","()(())","()()()"]
+
+"""
+
+
 class Solution:
 
     def generateParenthesis(self, n: int):
+        """Implementation of problem solution.
+
+        :param n: number of parenthesses pairs
+        :return: array contains parentheses combinations
+
+        """
         generic_bracket = ["()"]
         my_set = set()
         prev_brackets = generic_bracket
