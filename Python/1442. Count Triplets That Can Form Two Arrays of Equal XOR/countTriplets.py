@@ -1,5 +1,6 @@
 from typing import List
-
+#Time complexity: O(n^2)
+#Space complexity: O(n^2)
 """Description:
 
 Given an array of integers arr.
