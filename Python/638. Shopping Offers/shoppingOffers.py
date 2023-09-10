@@ -1,4 +1,3 @@
-
 """Description
 
 In LeetCode Store, there are n items to sell. Each item has a price.
@@ -24,8 +23,63 @@ Example:
 
 """
 
-from typing import List
-
 
 class Solution:
-    def shoppingOffers(self, price: List[int], special: List[List[int]], needs: List[int]) -> int:
+
+    def __init__(self):
+        self.dp = {}
+
+    def shoppingOffers(self, price, special, needs):
+        """Implementation of problem solution.
+
+            :param price: array with prices for items
+            :param special: array of special which consist items for a sale price.
+            :param needs: array of items to buy
+            :return: lowest price.
+        """
+        cost = self.min_cost(needs, special, price)
+        return cost
+
+    def min_cost(self, needs, special, price):
+        """Calculates the lowest price for given needs to buy.
+
+            :param price: array with prices for items
+            :param special: array of special which consist items for a sale price.
+            :param needs: array of items to buy
+            :return: lowest price for given needs.
+        """
+        cost = sum(needs[i] * price[i] for i in range(len(needs)))
+        if self.dp.get(tuple(needs)):
+            return self.dp[tuple(needs)]
+
+        for spec in special:
+            if self.is_valid(needs, spec):
+                new_needs = self.get_new_needs(needs, spec)
+                cost = min(spec[-1] + self.min_cost(new_needs, special, price), cost)
+
+        self.dp[tuple(needs)] = cost
+        return cost
+
+    def _is_valid(self, needs, special):
+        """Check if given special can be applied.
+
+            :param needs: array of items to buy
+            :param special: array of items for a sale price
+            :return: true if special can be applied
+        """
+        for need, spec in zip(needs, special[:-1]):
+            if need < spec:
+                return False
+        return True
+
+    def _get_new_needs(self, needs, special):
+        """Calculate needs after applying special to it.
+
+            :param needs: array of items to buy
+            :param special: array of items for a sale price
+            :return: needs reduced by special offer.
+        """
+        new_needs = []
+        for need, spec in zip(needs, special[:-1]):
+            new_needs.append(need - spec)
+        return new_needs
