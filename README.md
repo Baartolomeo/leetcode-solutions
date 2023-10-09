@@ -28,6 +28,7 @@ Difficulty Legend:
 [1638. Count Substrings That Differ by One Character]: https://leetcode.com/problems/count-substrings-that-differ-by-one-character/
 [1442. Count Triplets That Can Form Two Arrays of Equal XOR]: https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/
 [638. Shopping Offers]: https://leetcode.com/problems/shopping-offers/
+[2149. Rearrange Array Elements by Sign]: https://leetcode.com/problems/rearrange-array-elements-by-sign/
 
 
 | Problem |                                                                                                                                                         Code                                                                                                                                                         |     Difficulty      | Runtime Distibution | Memory Distribution |
@@ -43,3 +44,4 @@ Difficulty Legend:
 |[1638. Count Substrings That Differ by One Character]|         <a href="https://github.com/bartlomiej-niemiec/leetcode-solutions/blob/main/Python/1638.%20Count%20Substrings%20That%20Differ%20by%20One%20Character/countSubstrings.py"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"  width="30%" height="30%"></img></a>          | ⭐⭐ |       20.13%        |       16.98%        |
 |[1442. Count Triplets That Can Form Two Arrays of Equal XOR]|         <a href="https://github.com/bartlomiej-niemiec/leetcode-solutions/blob/1442_python/Python/1442.%20Count%20Triplets%20That%20Can%20Form%20Two%20Arrays%20of%20Equal%20XOR/countTriplets.py"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"  width="30%" height="30%"></img></a>          | ⭐⭐ |       38.85%        |        7.1%         |
 |[638. Shopping Offers]|         <a href="https://github.com/bartlomiej-niemiec/leetcode-solutions/blob/638_python/Python/638.%20Shopping%20Offers/shoppingOffers.py"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"  width="30%" height="30%"></img></a>          | ⭐⭐ |       81.84%        |        71.02%         |
+|[2149. Rearrange Array Elements by Sign]|         <a href="https://github.com/bartlomiej-niemiec/leetcode-solutions/blob/2149_python/Python/2149.%20Rearrange%20Array%20Elements%20by%20Sign/rearrangeArray.py"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"  width="30%" height="30%"></img></a>          | ⭐⭐ |       84.50%        |        46.23%         |
