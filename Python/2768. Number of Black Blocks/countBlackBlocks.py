@@ -1,5 +1,5 @@
-# Time complexity: O(n)
-# Space complexity: O(n)
+# Time complexity: O(k) - k => number of black cells
+# Space complexity: O(m*n)
 
 """Description:
 
@@ -24,17 +24,6 @@ Example 1:
 
 """
 
-
-class Block:
-    """Class that represents Block."""
-
-    def __init__(self):
-        self.number_of_black_cells = 0
-
-    def increment_counter(self):
-        self.number_of_black_cells += 1
-
-
 class Solution:
     def countBlackBlocks(self, m, n, coordinates):
         """Implementation of problem solution.
@@ -53,12 +42,12 @@ class Solution:
                 for j in range(y - 1, y + 1):
                     if i < 0 or j < 0 or i >= m - 1 or j >= n - 1:
                         continue
-                    if not (block := blocks.get((i, j))):
-                        block = Block()
-                        blocks[(i, j)] = block
-                    if results[block.number_of_black_cells] != 0:
-                        results[block.number_of_black_cells] -= 1
-                    block.increment_counter()
-                    results[block.number_of_black_cells] += 1
+                    index = i + (m - 1) * j
+                    black_cells = blocks.get(index) or 0
+                    if results[black_cells] != 0:
+                        results[black_cells] -= 1
+                    black_cells += 1
+                    blocks[index] = black_cells
+                    results[black_cells] += 1
 
         return results
