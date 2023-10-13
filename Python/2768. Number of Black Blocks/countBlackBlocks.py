@@ -24,6 +24,7 @@ Example 1:
 
 """
 
+
 class Solution:
     def countBlackBlocks(self, m, n, coordinates):
         """Implementation of problem solution.
