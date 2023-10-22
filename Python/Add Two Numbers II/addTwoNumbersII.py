@@ -17,6 +17,9 @@ Example:
 
 """
 
+# Time Complexity: O(m + n)
+# Space Complexity: O(m + n)
+
 # Definition for singly-linked list
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -28,35 +31,44 @@ class Solution:
         l1_stack = []
         l2_stack = []
 
+        #Build Stack of L1
         current_node = l1
         while current_node != None:
             l1_stack.append(current_node)
             current_node = current_node.next
 
+        #Build Stack of L2
         current_node = l2
         while current_node != None:
             l2_stack.append(current_node)
             current_node = current_node.next
 
         current_node = None
-        prev_rest = 0
-        while (l1_stack or l2_stack or prev_rest != 0):
+        noTensFromPrevSum = 0
+        empty_node = ListNode(val=0)
+        while (l1_stack or l2_stack or noTensFromPrevSum != 0):
+
             if l1_stack:
                 l1_node = l1_stack.pop()
             else:
-                l1_node = ListNode(val=0)
+                l1_node = empty_node
+
             if l2_stack:
                 l2_node = l2_stack.pop()
             else:
-                l2_node = ListNode(val=0)
-            sum_rest = (l1_node.val + l2_node.val + prev_rest) // 10
-            if sum_rest:
-                sum_val = (l1_node.val + l2_node.val + prev_rest) - sum_rest * 10
-                prev_rest = sum_rest
+                l2_node = empty_node
+
+            #How many tens are in the sum of l1 + l2
+            noTens = (l1_node.val + l2_node.val + noTensFromPrevSum) // 10
+            if noTens:
+                l1L2Sum = (l1_node.val + l2_node.val + noTensFromPrevSum) - noTens * 10
+                noTensFromPrevSum = noTens
             else:
-                sum_val = l1_node.val + l2_node.val + prev_rest
-                prev_rest = 0
-            new_node = ListNode(val=sum_val)
+                l1L2Sum = l1_node.val + l2_node.val + noTensFromPrevSum
+                noTensFromPrevSum = 0
+
+
+            new_node = ListNode(val=l1L2Sum)
             new_node.next = current_node
             current_node = new_node
 
