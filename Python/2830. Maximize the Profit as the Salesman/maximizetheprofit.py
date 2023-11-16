@@ -15,9 +15,35 @@ Example:
     It can be proven that 3 is the maximum amount of gold we can achieve.
 
 """
-from typing import List
 
 
 class Solution:
 
-    def maximizeTheProfit(self, n: int, offers: List[List[int]]) -> int:
+    def maximizeTheProfit(self, n, offers) -> int:
+        """Implementation of problem solution.
+
+            :param n: number of houses on a number line
+            :param offers: 2D array with sale offers where single offer contain:
+                    * start - number of first house
+                    * end - number of last house
+                    * profit - offer price
+            :return: maximum amount of gold you can earn as a salesman
+        """
+        dp = [0] * n
+        sorted_offers = sorted(offers, key=lambda x: x[1])
+        start_index = 0
+        current_max = 0
+        for i in range(n):
+            for j in range(start_index, len(sorted_offers)):
+                start, end, profit = sorted_offers[j]
+                if end <= i:
+                    if start - 1 >= 0:
+                        current_max = max(current_max, dp[start - 1] + profit)
+                    else:
+                        current_max = max(current_max, profit)
+                else:
+                    start_index = j
+                    break
+            dp[i] = max(current_max, dp[i - 1] if i > 0 else 0)
+
+        return dp[n - 1]
