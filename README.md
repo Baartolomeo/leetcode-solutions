@@ -31,6 +31,7 @@ Difficulty Legend:
 [2149. Rearrange Array Elements by Sign]: https://leetcode.com/problems/rearrange-array-elements-by-sign/
 [2768. Number of Black Blocks]: https://leetcode.com/problems/number-of-black-blocks/
 [445. Add Two Numbers II]: https://leetcode.com/problems/add-two-numbers-ii/
+[2830. Maximize the Profit as the Salesman]: https://leetcode.com/problems/maximize-the-profit-as-the-salesman/
 
 
 | Problem |                                                                                                                                                         Code                                                                                                                                                         |     Difficulty      | Runtime Distibution | Memory Distribution |
@@ -49,3 +50,4 @@ Difficulty Legend:
 |[2149. Rearrange Array Elements by Sign]|         <a href="https://github.com/bartlomiej-niemiec/leetcode-solutions/blob/2149_python/Python/2149.%20Rearrange%20Array%20Elements%20by%20Sign/rearrangeArray.py"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"  width="30%" height="30%"></img></a>          | ⭐⭐ |       84.50%        |       46.23%        |
 |[2768. Number of Black Blocks]|         <a href="https://github.com/bartlomiej-niemiec/leetcode-solutions/blob/2768_python/Python/2768.%20Number%20of%20Black%20Blocks/countBlackBlocks.py"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"  width="30%" height="30%"></img></a>          | ⭐⭐ |       81.63%        |       85.31%        |
 |[445. Add Two Numbers II]|         <a href="https://github.com/bartlomiej-niemiec/leetcode-solutions/blob/445_python/Python/445.%20Add%20Two%20Numbers%20II/addTwoNumbersII.py"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"  width="30%" height="30%"></img></a>          | ⭐⭐ |       79.87%        |       41.89%        |
+|[2830. Maximize the Profit as the Salesman]|         <a href="https://github.com/bartlomiej-niemiec/leetcode-solutions/blob/2830_python/Python/2830.%20Maximize%20the%20Profit%20as%20the%20Salesman/maximizetheprofit.py"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"  width="30%" height="30%"></img></a>          | ⭐⭐ |       56.4%       |       44.58%        |
