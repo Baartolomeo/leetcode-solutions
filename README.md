@@ -1,4 +1,4 @@
-# <img src="https://leetcode.com/static/webpack_bundles/images/logo-dark.e99485d9b.svg"  width="20%" height="20%"></img>
+# <img src="https://leetcode.com/static/webpack_bundles/images/logo-dark.e99485d9b.svg"  width="20%" height="20%"> </img> <img allign="right" src="https://assets.leetcode.com/static_assets/marketing/2023-50.gif" width="70" height="70">
 My solutions of algorithmics problems on: https://leetcode.com/
 
 Solutions in language:
@@ -9,7 +9,6 @@ Solutions in language:
 
 | [Profile][Leetcode Profile]   |
 |-------------------------------|
-
 Difficulty Legend:
 * Easy: ⭐
 * Medium: ⭐⭐
