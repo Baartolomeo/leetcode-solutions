@@ -3,7 +3,7 @@ My solutions of algorithmics problems on: https://leetcode.com/
 
 Solutions in language:
 * Python
-* C++
+* C/C++
 
 [Leetcode Profile]:https://leetcode.com/user2261gr/
 
